@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopApp - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to ShopApp</h1>
+      <p>Discover quality products at great prices.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="filters">
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search products...">
+      </div>
+      <div class="filter-select">
+        <select id="category">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="alert"></div>
+    <div id="products" class="product-grid">
+      <p class="loading">Loading products...</p>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "shop-app",
+  "version": "1.0.0",
+  "description": "Basic e-commerce site with Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node db/seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
