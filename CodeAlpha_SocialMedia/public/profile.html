@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - ConnectHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container main-layout profile-layout">
+    <section class="feed-column">
+      <div id="alert"></div>
+      <div id="profile-header"></div>
+      <h2 class="section-title">Posts</h2>
+      <div id="profile-posts" class="feed-list">
+        <p class="loading">Loading profile...</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="edit-modal" class="modal" style="display:none">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit profile</h2>
+        <button type="button" class="modal-close" id="close-modal">&times;</button>
+      </div>
+      <div id="edit-alert"></div>
+      <form id="edit-form">
+        <div class="form-group">
+          <label for="edit-name">Display name</label>
+          <input type="text" id="edit-name" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-bio">Bio</label>
+          <textarea id="edit-bio" rows="3" maxlength="160"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-avatar">Avatar URL (optional)</label>
+          <input type="url" id="edit-avatar" placeholder="https://...">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Save changes</button>
+      </form>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/posts.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "connecthub",
+  "version": "1.0.0",
+  "description": "Mini social media app with Express.js and SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node -e \"require('fs').unlinkSync(require('path').join('db','social.db')); require('./db/database'); require('./db/seed'); console.log('Database reseeded.');\""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

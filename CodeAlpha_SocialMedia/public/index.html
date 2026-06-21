@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub - Feed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container main-layout">
+    <section class="feed-hero">
+      <div class="feed-hero-content">
+        <h1>Discover &amp; Connect</h1>
+        <p>Share your story, follow inspiring people, and join a colorful community.</p>
+      </div>
+      <img
+        class="feed-hero-img"
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=440&q=80"
+        alt="Friends connecting"
+      >
+    </section>
+
+    <aside class="sidebar">
+      <div class="sidebar-card gradient-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80" alt="Community">
+        <h3>✨ Your community</h3>
+        <p>Post updates, react with likes, and chat in comments.</p>
+      </div>
+      <div class="sidebar-card">
+        <h3>🔥 Trending topics</h3>
+        <ul class="trend-list">
+          <li><span class="trend-dot pink"></span> #WeekendVibes</li>
+          <li><span class="trend-dot cyan"></span> #DevLife</li>
+          <li><span class="trend-dot orange"></span> #FoodFinds</li>
+          <li><span class="trend-dot green"></span> #BookClub</li>
+        </ul>
+      </div>
+      <div class="sidebar-card cyan-card">
+        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&q=80" alt="Team work">
+        <h3>🚀 Get started</h3>
+        <p>Log in as alice, bob, or carol to explore the demo feed.</p>
+      </div>
+    </aside>
+
+    <section class="feed-column">
+      <div id="login-prompt" class="login-banner" style="display:none">
+        <p>Sign in to post, like, and follow people.</p>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+      </div>
+
+      <div id="compose-section" class="compose-card" style="display:none">
+        <h2>✏️ What's on your mind?</h2>
+        <div id="alert"></div>
+        <form id="compose-form">
+          <textarea id="post-content" rows="3" maxlength="500" placeholder="Share something colorful with everyone..." required></textarea>
+          <div class="compose-footer">
+            <span class="char-hint">Max 500 characters</span>
+            <button type="submit" class="btn btn-primary">Post</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="feed-tabs" id="feed-tabs" style="display:none">
+        <button class="feed-tab active" data-mode="all">🌍 All posts</button>
+        <button class="feed-tab" data-mode="following">👥 Following</button>
+      </div>
+
+      <div id="feed" class="feed-list">
+        <p class="loading">Loading feed...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/posts.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/feed.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const user = await getCurrentUser();
+      if (user) document.getElementById('feed-tabs').style.display = 'flex';
+    });
+  </script>
+</body>
+</html>

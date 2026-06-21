@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up - ConnectHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="auth-page">
+    <div class="auth-split">
+      <div class="auth-visual">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="Creative workspace">
+        <div class="auth-visual-content">
+          <h2>Join the community</h2>
+          <p>Create your profile, follow people you admire, and share your world in full color.</p>
+        </div>
+      </div>
+      <div class="auth-container">
+        <h1>Create account</h1>
+        <p class="auth-subtitle">It only takes a minute</p>
+        <div id="alert"></div>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required pattern="[a-zA-Z0-9_]{3,30}" title="3-30 characters: letters, numbers, underscore">
+          </div>
+          <div class="form-group">
+            <label for="name">Display name</label>
+            <input type="text" id="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required minlength="6" autocomplete="new-password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+        </form>
+        <p class="auth-footer">Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
